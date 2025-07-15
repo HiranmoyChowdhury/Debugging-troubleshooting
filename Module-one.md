@@ -20,3 +20,21 @@ this is a tool to know all the system calls a specific program make.
 ## itrace
 
 to look at library calls
+
+## Understanding the problem
+1. if it doesn't work get enough information as what he was doing
+2. what steps did he took
+3. what was the expected result
+4. what he actually got
+
+try to give and immediate solution for work. 
+
+## Reproduction Case
+If that problem is missing directory then create the program without that directory with the same version and same environment that program faced issue.
+
+1. Reads the log available to me (on linux read sys log)
+2. if no error message or err msg is not helpful(internal system error) then try to isolate it
+3. analyse the problem and try to fix it with same environment
+4. don't hesitate to ask the user about the problem and related information
+
+## Finding the Root Cause
