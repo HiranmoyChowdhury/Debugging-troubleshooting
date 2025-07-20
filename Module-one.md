@@ -38,3 +38,39 @@ If that problem is missing directory then create the program without that direct
 4. don't hesitate to ask the user about the problem and related information
 
 ## Finding the Root Cause
+
+For long term remediation needs creativity and the exact problem we are having.
+come up with the possibilities, if it is not then try different possibilities until we find that explains the problem.
+searching online with error message or looking the documentation after testing with the same environment the issue occurs.
+
+### iotop 
+which processes taking most input and output
+### vmtop
+virtual memory operations
+### ionice
+allow backup system to reduce access the disk
+### iftop
+current traffic to the network interfaces
+### rsync
+often used to backing up the data
+### trickle
+limit the bandwidth to use
+### nice cmd
+reducing the priority of a program to access the cpu
+
+## intermittent issue
+
+- need to find when the issue happens and when not
+### heisenbug
+where just observing a phenomenon alters the phenomenon
+
+this occurs randomly. such as restarts the program solves the issue. need a long term remediation.
+This could happens due to bad memory allocation or poor resource management
+
+
+## binary search or bisection
+
+if there are several files causing issue, we need to find the faulty file.
+Bisecting those could be a solution. if there are 6 files, take three and run the program, if it is fine, then the problem is with other three.
+
+there are `git bisect` command which allows us to bisection search on commit history to find out the bad commit which creates the issue.
