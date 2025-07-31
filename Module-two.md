@@ -43,4 +43,9 @@ swapping memory takes a lot of time dude...
 - malicious software.
 
 
+## slow web server
 
+- to check how slow a web server is to use ab(apache benchmark tool). ex. `ab -n <num of req> www.example.com`
+- if it is, check where it is busy. If it is not busy with the priority task, set priority to each process. it will be execute according priority.
+-- cmd: `nice/renice`
+- look for how non prior processes are generated and what they are doing by `ps aux` and try to find an solution.
