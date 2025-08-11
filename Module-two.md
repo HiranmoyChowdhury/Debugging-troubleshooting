@@ -48,4 +48,49 @@ swapping memory takes a lot of time dude...
 - to check how slow a web server is to use ab(apache benchmark tool). ex. `ab -n <num of req> www.example.com`
 - if it is, check where it is busy. If it is not busy with the priority task, set priority to each process. it will be execute according priority.
 -- cmd: `nice/renice`
-- look for how non prior processes are generated and what they are doing by `ps aux` and try to find an solution.
+- look for how non prior processes are generated and what they are doing by `ps ax` and try to find an solution.
+
+## monitoring tool linux
+
+- to monitor cpu or disk i/o there are some monitoring tool need to use. can find on internet.
+- SAR (System Activity Reporter) is especially useful for analyzing performance trends and identifying recurring issues over time
+- the USE Method suggests creating a resource list and a `Functional Block Diagram`. This helps avoid data overload and provides a clear visualization of the system's components and their interactions.
+- autogrouping optimizes desktop performance during CPU-intensive workloads by grouping processes and ensuring fair CPU cycle distribution.
+
+## effiecient Code
+
+- clear code
+- make it faster if it is not fast enough
+- Profiler is a tool which measures the resources that our code is using.
+- gprofile to analyse c program. how many times a func is  called and how much time each of them took
+- we can analyze the cost of code and how expensive it is
+
+- using right data structure
+- expensive loop
+- keeping local result
+
+## slow scripts problem
+
+measure a binary spent time to run a process:
+
+```bash
+$ time <process name and args>
+real time
+user time
+sys time
+```
+real : total time to execute the program
+user : time spent doing operations on user space
+sys : system time
+
+real time = sys time + user time + some other process time
+
+there are bunch of Profiler tool for golang. check those out [here](https://go.dev/blog/pprof)
+there are some graphical interface too that to function to function call and time to execute each function
+
+## parallelizing operation
+- you know go-routine
+
+# slowly growing in complexity
+
+- make changes in solutions
